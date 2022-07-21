@@ -1,0 +1,18 @@
+.container {
+  background-color: #333;
+  /* padding: 1rem; */
+  /*
+   El comportamiento por default de los hijos de unOa caja Flexbox, se van a alinear (y la direccion por defecto de una caja Flexbox es por Fila (Row))  
+  
+  Si existe otra caja Flexbox igual a ella, se van a juntar (Block)
+
+  Recuerda que por defecto trabajan con un Display Block (en bloque), por como las conoce y deci Jon, ENVIDIOSAS, debido que utilizan todo el espacio sin siquiera ocuparlo.
+  Bueno, pues Display Flex las convertira en una caja Flexible pero de igual manera trabajaran en bloque (block), por eso el comportamiento de arriba. Y aqui entra nuestra otra propiedad inline-flex (flexible en linea), se van a comportar como un elemento en linea :D
+  */
+  /* display: flex; (flex en Bloque) */
+  display: inline-flex; /* (Flex en Linea) */
+}
+
+.item {
+  background-color: #666;
+}
