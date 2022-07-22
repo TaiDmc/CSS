@@ -6,3 +6,34 @@
   color: rebeccapurple;
   border: thin solid greenyellow;
 }
+
+/* 
+Sistema Hexadecimal
+0123456789ABCDEF (combinaciones totales, 16k)
+
+RGB "RedGreenBlue" (Medio Digitales) vs CMYK "CyanMagentaYellowKey"(Medios Impresos)
+
+Colores en HEX van a ser colores de 6 digitos
+#
+FF (canal rojo)
+66 (canal verde)
+00 (canal azul)
+#FF6600 
+*/
+
+.color-hex {
+  background-color: #ff6600; /* No importa realmente si son mayusculas o minusculas */
+  background-color: #f60; /* La pareja de numeros es igual asi que se puede simplificar
+   si lo quieres hacer, es necesario que los digitos sean en parejas  */
+  background-color: #ff6605; /* variante de naranja */
+  background-color: #00000020; /* los dos ultimos digitos hacen referencia a la opacidad 0-99 */
+  background-color: #0005; /* Tambien podemos hacer la simplificacion, pero solo de 10 en 10 hasta 90(no tan especifico) */
+
+  color: #12ac78;
+  border: thin solid #fff; /* Maxima saturacion de iluminacion? */
+  border: thin solid #000;
+  /* Esto es como una palanca, enciendes canales :] */
+  border: thin solid #f00;
+  border: thin solid #0f0;
+  border: thin solid #00f;
+}
