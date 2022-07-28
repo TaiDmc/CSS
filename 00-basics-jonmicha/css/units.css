@@ -1,0 +1,58 @@
+/* 
+Unidades de Medida
+1) Absolutas (Su valor no cambia, son unidades del mundo real) (usualmente para impresiones)
+ pc, cm, mm, in, Q
+ pt (1/72in)
+ px (1/95in)
+
+ 2) Relativas (Su valor es relativo a un contexto)
+ em, rem, ex, ch - al tamanio de la fuente
+ em - basada en la anchura de la "m" de la fuente del elemento
+ rem - basada en la anchura de la "m" de la fuente del elemento raíz (html)
+ ex - basada en la altura de la "x" de la fuente del elemento
+ ch - basada en la anchura "0" de la fuente del elemento
+ % - al tamanio del contenedor
+
+ vw, vh, vmin, vmax, - al tamanio del viewport
+ vw - ancho del viewport van del 1 a 100
+ vh - alto del viewport van del 1 a 100
+ vmax - entre vw y vh toma el que tenga mayor valor
+ vmin - entre vw y vh toma el que tenga menor valor
+  
+ Conversiones entre unidades - http://pxtoem.com/
+*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::backdrop {
+  box-sizing: inherit;
+}
+
+/* Pixeles, ya no tan usados debido a el Responsive Design */
+.pixels {
+  background-color: cadetblue;
+  width: 500px;
+  height: 300px;
+  padding: 20px;
+  font-size: 32px; /* Valor por defecto */
+  border: thick solid rebeccapurple;
+}
+
+/* Ems,  (font-size = 16px; 1em = 16px, 2em = 32px ...)*/
+.ems {
+  background-color: cadetblue;
+  font-size: 24px;
+  padding: 1em 0.5em; /* Estaremos tomando como referencia el tamanio de la fuente(del scope o base). En este caso 1em equivale a 24px */
+  border: thick solid black;
+}
+
+.em-child {
+  background-color: peachpuff;
+  border: thick black solid;
+  font-size: 2em; /* Ahora estamos tomando como referencia el tamanio de la fuente de su padre. En este caso 24px y 2em equivale al doble, es decir 48px  */
+  margin: 0.5em;
+  padding: 1rem;
+}
