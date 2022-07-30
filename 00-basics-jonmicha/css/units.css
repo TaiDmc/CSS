@@ -59,7 +59,7 @@ html {
 
 /* Hola */
 
-/* Rems, (toma de referencia a el elemento raiz (html)) */
+/* Rems, (toma de referencia a el elemento raiz (html). Tomando como referencia la anchura de "m" (hablando tipograficamente)) */
 
 .rems {
   background-color: cadetblue;
@@ -73,4 +73,31 @@ html {
   font-size: 2rem;
   margin: 0.5rem;
   padding: 1rem;
+}
+
+/* Exs, (toma como referencia al el elemento raiz. Pero en este caso toma la altura de "x" (hablando tipograficamente)) */
+
+.exs {
+  background-color: cadetblue;
+  font-size: 24px;
+  border: thick solid black;
+}
+
+.ex-child {
+  background-color: peachpuff;
+  border: thick solid black;
+  font-size: 2ex;
+  margin: 0.5ex;
+  padding: 1ex;
+}
+
+/*
+Chs, estos se van a ajustar a los caracteres que tu indiques(en CHs porsupuesto), por lo cual esta unidad es bastante valiosa a la hora de crear formularios, por ejemplo.  
+Todo esto tomando como referencia a "0" y el font-size de nuestro elemento raíz, es decir html. 
+*/
+
+.chs {
+  background-color: cadetblue;
+  width: 15ch;
+  overflow-y: scroll;
 }
