@@ -1,0 +1,26 @@
+/* 
+Estilos de la Fuente
+
+font-family (Familia Tipografica)
+font-size (Tamanio de Fuente)
+font-weight (Negritas)
+font-style (Estilo de Tipografia)
+font-variant (Variante de Fuente. pe: UpperCase)
+line-height (Espacio entre Parrafo)
+font. (Shorthand de todas las mencionadas)
+*/
+
+.font {
+  /* Cada SO tiene ya instaladas de forma segura sus tipografias */
+  font-family: sans-serif;
+  font-family: cursive;
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  font-variant: small-caps;
+  font-style: normal;
+  line-height: 1.5rem;
+  font: italic small-caps bold 20px / 1.5 monospace;
+}
