@@ -1,8 +1,21 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 .container {
   background-color: #333;
+  margin: 2rem;
+  height: 30vh;
   /* padding: 1rem; */
   /*
-   El comportamiento por default de los hijos de unOa caja Flexbox, se van a alinear (y la direccion por defecto de una caja Flexbox es por Fila (Row))  
+   El comportamiento por default de los hijos de una caja Flexbox, se van a alinear (y la direccion por defecto de una caja Flexbox es por Fila (Row))  
   
   Si existe otra caja Flexbox igual a ella, se van a juntar (Block)
 
@@ -11,8 +24,57 @@
   */
   /* display: flex; (flex en Bloque) */
   display: inline-flex; /* (Flex en Linea) */
+  display: flex;
+
+  /*
+  Flex-direction -  Direcciones felxibles
+   */
+  flex-direction: row; /* Valor por defecto */
+  flex-direction: row-reverse; /* Fila de reversa xd */
+  flex-direction: column-reverse; /* Columna de reversa */
+  flex-direction: column; /* Columna */
+  flex-direction: row-reverse;
+
+  /*  
+  Flex-wrap - Envoltura 
+  Va a preguntar si quiere los items envueltos o no en una fila o columna (dependiendo la flex-direction); en una sola linea o columna.
+  El valor por defecto siendo nowrap
+  */
+  flex-wrap: nowrap; /* Valor por defecto, va a tratar de envolver a todos sus hijos en una sola linea */
+  flex-wrap: wrap; /* Va a envolver a sus hijos, considerando las dimensiones (height y width; y si es que no caben sus hijos va a crear nuevas filas o columnas, dependiendo la direccion */
+  flex-wrap: wrap-reverse; /* Lo mismo, pero al reves xd */
+
+  /* Y aqui un shorthand de flex-direction y flex-wrap*/
+  flex-flow: column wrap;
+
+  /*
+  Justify content define la alineacion del eje principal, no solamente en el eje x ya que esto lo definira nuestro flex-direction
+ Tenemos estos valores en justify-content
+ flex-start *default|| center || flex-end || space-between || space-around || space-evenly
+  */
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around; /* Considera las orillas pero no proporcionalmente */
+  justify-content: space-between; /* NO considera las orillas */
+  justify-content: space-evenly; /* Considera las orillas proporcionalmente */
+  justify-content: flex-end;
+  justify-content: flex-start;
+
+  /* Ahora en column */
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-around;
+  justify-content: space-between;
+  justify-content: space-evenly;
+  justify-content: flex-end;
+
+  flex-direction: row-reverse; /* Y ahora al reves xd */
+  justify-content: space-evenly;
 }
 
 .item {
+  border: medium solid black;
+  width: 20%;
+  height: 20%;
   background-color: #666;
 }
