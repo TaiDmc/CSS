@@ -32,3 +32,23 @@
   height: 400px;
   border-radius: 50%; /* Ovalo por asi decirlo xd */
 }
+
+/* 
+El outline se puede definir como un borde externo, este va a ser un borde exterior
+Cabe a aclarar que outline no forma parte del modelo de caja 
+*/
+.outline {
+  color: white;
+  text-align: center;
+  outline-width: 1rem;
+  outline-style: dashed;
+  outline-color: greenyellow;
+  outline: thick solid blue; /* Shorthand */
+  /* outline-width: 20px; */
+  /* outline-width: 100px; */
+  /* border-width: 100px; */
+  outline-offset: 3rem; /* Offset significa la distancia que se va a alejar de la caja */
+  outline-offset: -3rem; /* Al igual se ouede aplicar en negativo, solamente se contraerá */
+  /* outline-width: 3rem; */
+  /* outline-offset: 1rem; */
+}
