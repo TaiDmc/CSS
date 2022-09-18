@@ -1,0 +1,41 @@
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+.box {
+  border: thick solid black;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 200px;
+}
+
+/* 
+**** Box Shadow - Sombra a las cajas****
+ 
+box-shadow: mov-x mov-y blur-radius spread-blur color inset/outset; 
+
+- Si no se especifica el color de la sombra, esta va a heredar el color de este elemento.
+
+- Se pueden especificar valores negativos
+
+- Valor por defecto del lugar de la sombra es outset 
+
+*/
+.box-shadow {
+  /* color: thistle; */
+  box-shadow: 1rem 1rem 1rem 1rem;
+  box-shadow: -1rem -1rem 1rem 1rem;
+  box-shadow: 1rem 1rem 1rem 1rem #0005;
+  box-shadow: 1rem 1rem 1rem 1rem #000 inset;
+  box-shadow: 1rem 1rem 1rem 1rem #000 outset;
+  box-shadow: 1rem 0.5rem 2rem 0.5rem;
+}
