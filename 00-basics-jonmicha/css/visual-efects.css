@@ -16,6 +16,7 @@ html {
   margin-right: auto;
   height: 200px;
   width: 200px;
+  margin-bottom: 5rem;
 }
 
 /* 
@@ -30,12 +31,128 @@ box-shadow: mov-x mov-y blur-radius spread-blur color inset/outset;
 - Valor por defecto del lugar de la sombra es outset 
 
 */
-.box-shadow {
+.shadow {
   /* color: thistle; */
+  font-size: 2rem;
+  text-align: center;
   box-shadow: 1rem 1rem 1rem 1rem;
   box-shadow: -1rem -1rem 1rem 1rem;
   box-shadow: 1rem 1rem 1rem 1rem #0005;
   box-shadow: 1rem 1rem 1rem 1rem #000 inset;
   box-shadow: 1rem 1rem 1rem 1rem #000 outset;
   box-shadow: 1rem 0.5rem 2rem 0.5rem;
+
+  /*
+   **** Text Shadow **** 
+   box-shadow: mov-x mov-y blur-radius color; 
+  */
+  text-shadow: -1rem -1rem 0.3rem hotpink;
+}
+
+/*
+ Multiple Shadows 
+We only need to separate our shadows with a comma
+*/
+.shadows {
+  font-size: 2rem;
+  text-align: center;
+  box-shadow: 1rem 1rem 1rem 1rem #000 inset, 1rem 1rem 1rem 1rem #000 inset,
+    -1rem -1rem 0.5rem 1.5rem pink;
+  text-shadow: -1rem -1rem 0.5rem yellow, -1rem -1rem 0.5rem cyan;
+}
+
+/* 
+****** Filter* ******
+  - drop-shadow(), la clave de este es tener una imagen sin fondo
+*/
+
+.drop-shadow {
+  width: 300px;
+  height: 300px;
+}
+
+.drop-shadow img {
+  max-width: 100%;
+  height: auto;
+  /* filter: drop-shadow(mov-x mov-y blur-radius color); */
+  filter: drop-shadow(1rem 1rem 1rem red);
+  filter: drop-shadow(1rem 1rem 1rem steelblue);
+}
+
+/*
+*** Filter Gradient ***
+*/
+
+.linear-gradient {
+  background-image: linear-gradient(0deg, thistle, lightblue, lightgreen);
+  background-image: linear-gradient(30deg, thistle, lightblue, lightgreen);
+  background-image: linear-gradient(45deg, thistle, lightblue, lightgreen);
+  background-image: linear-gradient(180deg, thistle, lightblue, lightgreen);
+  background-image: linear-gradient(45deg, thistle, lightblue, lightgreen);
+  /* La inclinacion tambien se puede hacer con palabras clave. */
+  background-image: linear-gradient(to right, thistle, lightblue, lightgreen);
+  background-image: linear-gradient(to top, thistle, lightblue, lightgreen);
+  background-image: linear-gradient(to bottom, thistle, lightblue, lightgreen);
+  background-image: linear-gradient(
+    to top right,
+    thistle,
+    lightblue,
+    lightgreen
+  );
+  background-image: linear-gradient(
+    to right bottom,
+    thistle,
+    lightblue,
+    lightgreen
+  );
+
+  background-image: linear-gradient(90deg, thistle, lightblue, lightgreen);
+  /* Proporciones */
+  background-image: linear-gradient(
+    90deg,
+    thistle 30%,
+    /* Fin */ lightblue 50% 60%,
+    /* Inicio y fin */ lightgreen
+  );
+}
+
+.radial-gradient {
+  /* Exactamente igual que Linear */
+  background-image: radial-gradient(cyan, rebeccapurple);
+  /* Al igual se puede especificar el gradiente radial (tipo, tamanio) */
+  background-image: radial-gradient(circle 5rem, cyan, rebeccapurple);
+  background-image: radial-gradient(
+    circle 6rem,
+    cyan 30%,
+    thistle 60%,
+    rebeccapurple
+  );
+  /* Podemos dar la ubicacion inicial del radial. */
+  background-image: radial-gradient(
+    circle 6rem at top,
+    cyan 30%,
+    thistle 60%,
+    rebeccapurple
+  );
+  background-image: radial-gradient(
+    circle 6rem at bottom right,
+    cyan 30%,
+    thistle 60%,
+    rebeccapurple
+  );
+  background-image: radial-gradient(
+    circle 6rem at center,
+    /* default* */ cyan 30%,
+    thistle 60%,
+    rebeccapurple
+  );
+  /* Elipse (x, y) */
+  background-image: radial-gradient(
+    ellipse 50px 80px,
+    cyan 30%,
+    thistle 60%,
+    rebeccapurple
+  );
+  /* japan flag */
+  background-image: radial-gradient(circle 100px, red 50%, white 50%);
 }

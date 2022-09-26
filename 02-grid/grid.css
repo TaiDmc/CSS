@@ -319,8 +319,37 @@ img {
 .grid-align .item:nth-child(4) {
   /*
   Y para alinear solo un ITEM 
-  ***alinea asimismo
+  *** self || alinea asimismo
   */
-  justify-self: left; /* X */
+  justify-self: right; /* X */
   align-self: start; /* Y */
+}
+
+/* 
+** Alineacion de Grid Tracks **
+ es decir la alineacion de la grid
+
+ - Justify-content alinea todas las tracks del eje X
+ - Align-content alinea todas las tracks del eje Y
+
+ Muyyy similar o igual por asi decirlo con el sistema de maquetacion Flexbox
+ */
+
+.grid-align-tracks {
+  display: grid;
+  /* Grid 3x2 */
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(2, 150px);
+  justify-content: start; /* default* */
+  justify-content: end;
+  justify-content: center;
+  justify-content: space-around; /* Repartir el espacio proporcionalmente contando con las orillas */
+  justify-content: space-between; /* Repartir el espacio proporcionalmente sin contar las orillas */
+  justify-content: space-evenly; /* Repatir el espacio proporcionalmente entre elementos y orillas */
+  align-content: start; /* default* */
+  align-content: end;
+  align-content: center;
+  align-content: space-between;
+  align-content: space-around;
+  align-content: space-evenly;
 }
