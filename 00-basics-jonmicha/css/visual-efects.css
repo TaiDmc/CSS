@@ -445,23 +445,116 @@ We only need to separate our shadows with a comma
   background-position: center;
 
   /* La funcion circle() aceptara el radio del circulo (redundante) y tambien un posible "at (como los gradientes) o coordenadas
-  */
+  */ /* 
   clip-path: circle(10rem);
   clip-path: circle(10rem at left);
   clip-path: circle(10rem at bottom);
   clip-path: circle(10rem at left top);
   clip-path: circle(10rem at 0 0);
-  clip-path: circle(10rem at 10%);
+  clip-path: circle(10rem at 10%); */
 
   /* La funcion ellipse() va a tener parametros similares como su hermano de arriba (cirle)
   pero ahora tendras que especificar ambos ejes */
-  clip-path: ellipse();
+  /*  clip-path: ellipse();
   clip-path: ellipse(10rem);
   clip-path: ellipse(5rem 7rem at left);
   clip-path: ellipse(5rem 7rem at top);
   clip-path: ellipse(5rem 10rem at 180px 300px);
+ */
+  /* La funcion inset() necesita valores obligatoriamente, este hará un cuadrado (como el modelo de caja (cuatro valores no obligatorios))
+  - Tambien existe un redondeo dentro de la funcion llamado "round", los valores que esten delante de el seran los lados (modelo de caja) seran los que tendran estos valores redondeados (cabe aclarar que esto funciona similar al modelo de caja de CSS)
+  */
+  /* clip-path: inset(4rem);
+  clip-path: inset(4rem);
+  clip-path: inset(3rem 2rem);
+  clip-path: inset(3rem 2rem 1rem 0.5rem); */
+  clip-path: inset(1rem round 1rem); /* todos */
+  /* clip-path: inset(2rem round 5rem 4rem 3rem 1rem); */
+  clip-path: inset(1rem round 5rem 2rem); /* this is nicer xd */
 
-  /* La funcion inset() necesita valores obligatoriamente, este hará un cuadrado (como el modelo de caja (cuatro valores no obligatorios))*/
-  clip-path: inset(4rem);
-  clip-path: inset(4rem);
+  /* La funcion polygon() necesita parametros (igual que la funcion de arriba) */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    50% 100%
+  ); /* Un triangulo, estableciendo coordenadas (tercera pico xd) */
+
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+/* ********** Formas ************** */
+.shapes {
+  border: thick solid black;
+  padding: 1rem;
+  margin: 0 auto 5rem;
+  max-width: 800px;
+  font-size: 1.25rem;
+}
+
+.shapes img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: 0 50%;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/*
+ Estableciendo la forma con nuestro circle
+  *Esto adaptara nuestro texto a la forma de nuestra imagen por lo  tanto no se vera igual de jodida de lo que estaba XD
+ */
+.shape-1 {
+  margin: 4rem 2rem;
+  /* shape-outside: circle();
+  shape-outside: ellipse();
+  shape-outside: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  ); */
+  shape-outside: circle();
+}
+
+.shape-2 {
+  margin: 4rem 0 4rem 2rem;
+  shape-outside: ellipse();
+}
+
+.shape-3 {
+  margin: 2rem 4rem 1rem 0;
+  shape-outside: polygon(
+    50% 2%,
+    100% 36%,
+    93% 85%,
+    38% 78%,
+    12% 80%,
+    0 72%,
+    13% 39%
+  );
 }
